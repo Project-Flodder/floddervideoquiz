@@ -132,6 +132,9 @@ footer a:hover {
     body {
         font-size: 14px;
         padding: 10px;
+        justify-content: flex-start; /* Zorgt dat de inhoud aan de bovenkant blijft */
+        align-items: center; /* Optioneel: inhoud horizontaal centreren */
+        height: auto; /* Past de hoogte van de body aan zodat het niet voll
         width: 100%; /* Zorgt ervoor dat de breedte zich aanpast */
     }
 
