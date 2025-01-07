@@ -101,3 +101,15 @@ function resetButtons() {
         button.style.pointerEvents = '';  // Enable hover effect again
     });
 }
+
+// Voeg touchstart en click toe om de knop te activeren op zowel desktops als touchscreens
+document.querySelectorAll('#optionsContainer button').forEach(button => {
+    button.addEventListener('click', (event) => handleButtonClick(event));
+    button.addEventListener('touchstart', (event) => handleButtonClick(event), { passive: true });
+});
+
+function handleButtonClick(event) {
+    const button = event.target;
+    const answer = button.innerText;
+    checkAnswer(answer, button);
+}
