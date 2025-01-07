@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flodder Video Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <img id="logo" class="home-logo" src="image/flodderlogo1.png" alt="Flodder Logo">
+    </div>
+    
+    <div id="content">
+        <button id="startButton" onclick="startVideo()">Start</button>
+    </div>
+
+    <div id="videoContainer" style="display:none;">
+        <div id="optionsContainer" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <button id="option1" onclick="checkAnswer('Bijwerkingen', this)">Bijwerkingen</button>
+            <button id="option2" onclick="checkAnswer('Schijnvertoning', this)">Schijnvertoning</button>
+            <button id="option3" onclick="checkAnswer('Vriezen & dooien', this)">Vriezen & dooien</button>
+        </div>
+        <div class="video-wrapper">
+            <video id="video" width="100%">
+                <source id="videoSource" src="videos/bijwerkingen.mp4" type="video/mp4">
+                Je browser ondersteunt dit videoformaat niet.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<footer id="footer">
+    <p>&copy; Gemaakt door Rick Boogaard, volg mijn andere Flodder project via deze links: 
+        <a href="https://www.instagram.com/project.flodder" target="_blank" rel="noopener noreferrer">Instagram</a> | 
+        <a href="https://www.facebook.com/share/18qdmksznj/" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+        <a href="mailto:projectflodder@gmail.com" target="_blank" rel="noopener noreferrer">Contact</a>
+    </p>
+</footer>
+
+</html>

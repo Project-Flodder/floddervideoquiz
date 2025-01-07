@@ -1,0 +1,161 @@
+/* Algemene stijlen */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'KorinthSerialBold', sans-serif;
+    text-align: center;
+    background-color: #FF7F00;
+    background-image: radial-gradient(circle at center center, #ff0000, #ffff00),
+                      repeating-radial-gradient(circle at center center, #ff0000, #ff0000, 10px, transparent 20px, transparent 10px);
+    background-blend-mode: multiply;
+    color: #e4e145;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraal verticaal */
+    align-items: center; /* Centraal horizontaal */
+    height: 100vh; /* 100% van de hoogte van het scherm */
+    width: 100%; /* Zorg ervoor dat de breedte van de pagina niet te breed is */
+    overflow-x: hidden; /* Verberg horizontale scroll */
+}
+
+/* Specifieke stijlen voor de header */
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+#logo {
+    max-width: 80%;
+    max-height: 150px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.home-logo {
+    max-width: 100%;
+    max-height: 600px;
+    transform: scale(1.5);
+}
+
+.small-logo {
+    transform: scale(0.8);
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+button {
+    font-size: 20px;
+    padding: 12px 25px;
+    margin: 15px;
+    cursor: pointer;
+    border: 4px solid #e4e145;
+    border-radius: 11px;
+    background-color: #e4e145;
+    color: red;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #e4e145 !important;
+    color: #red !important;
+    border-color: #e4e145 !important;
+    transform: scale(1.1);
+}
+
+#optionsContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    flex-wrap: nowrap; /* Zorgt dat knoppen naast elkaar blijven */
+}
+
+#optionsContainer button {
+    margin: 5px;
+    background-color: #e4e145;
+    color: red;
+}
+
+#optionsContainer button:hover {
+    background-color: #e4e145 !important;
+    color: red !important;
+    border-color: #e4e145 !important;
+    transform: scale(1.05);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 15px;
+    border: 3px solid #e4e145;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer links */
+footer a {
+    color: yellow;  /* Standaard kleur voor links in de footer */
+    text-decoration: none;  /* Verwijder onderstreping */
+}
+
+footer a:hover {
+    color: #8B8000;  /* Kleur bij hover voor links in de footer */
+}
+
+/* Responsieve stijlen voor mobiele apparaten */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%; /* Zorgt ervoor dat de breedte zich aanpast */
+    }
+
+    #logo {
+        max-width: 60%;
+        max-height: 120px;
+        margin-bottom: 5px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #optionsContainer {
+        flex-wrap: nowrap; /* Zorgt dat knoppen horizontaal blijven */
+    }
+
+    #optionsContainer button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .video-wrapper {
+        padding-bottom: 75%; /* Past de verhouding aan voor kleinere schermen */
+    }
+}
