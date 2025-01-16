@@ -42,10 +42,20 @@ function playRandomVideo() {
 
 function updateOptions() {
     const options = getRandomOptions();
+    const randomizedOptions = shuffleArray(options); // Willekeurige volgorde
     const buttons = document.querySelectorAll('#optionsContainer button');
-    options.forEach((option, index) => {
+    randomizedOptions.forEach((option, index) => {
         buttons[index].innerText = option;
     });
+}
+
+// Hulpfunctie om een array te shufflen (Fisher-Yates algoritme)
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 function getRandomOptions() {
