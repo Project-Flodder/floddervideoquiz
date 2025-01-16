@@ -2,8 +2,8 @@ let currentVideo;
 let previousVideo = null;
 let correctAnswer;
 let videoPaths = [
-    { path: "CUT/Bijwerkingen/clip1.mp4", answer: "Bijwwerkingen" },
-    { path: "CUT/Bijwerkingen/clip2.mp4", answer: "Bijwwerkingen" },
+    { path: "CUT/Bijwerkingen/clip1.mp4", answer: "Bijwerkingen" },
+    { path: "CUT/Bijwerkingen/clip2.mp4", answer: "Bijwerkingen" },
     { path: "CUT/Schijnvertoning/clip1.mp4", answer: "Schijnvertoning" },
     { path: "CUT/Schijnvertoning/clip2.mp4", answer: "Schijnvertoning" },
     { path: "CUT/Vriezenendooien/clip1.mp4", answer: "Vriezen & dooien" },
